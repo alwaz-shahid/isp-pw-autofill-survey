@@ -1,9 +1,3 @@
-const { chromium } = require('playwright');
-
-// student credentials
-const username = '';
-const password = '';
-
 async function main() {
   // student portal direct URL
   let url = 'https://portal.isp.edu.pk/portal';
@@ -12,16 +6,14 @@ async function main() {
   try {
     await page.goto(url);
     //looking for the inputs
-    await page.goto('https://portal.isp.edu.pk/portal');
-    //updated code - outdated in outcasted,js
-    await page.waitForSelector('input[placeholder="Enter User ID"]');
-    const usernameInput = await page.getByPlaceholder('Enter User ID');
+    await page.waitForSelector('input[placeholder="Enter User Name"]');
+    const usernameInput = await page.getByPlaceholder('Enter User Name');
     await usernameInput.click();
     await usernameInput.press('NumLock');
     await usernameInput.fill(username);
     await usernameInput.press('Enter');
-    await page.waitForSelector('input[placeholder="Enter Password"]');
-    const passwordInput = await page.getByPlaceholder('Enter Password');
+    await page.waitForSelector('input[placeholder="Password"]');
+    const passwordInput = await page.getByPlaceholder('Password');
     await passwordInput.fill(password);
     const signInButton = await page.getByRole('button', { name: 'Sign In' });
     await signInButton.click();
