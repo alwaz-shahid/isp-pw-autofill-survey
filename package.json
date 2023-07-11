@@ -1,15 +1,14 @@
 {
   "name": "isp-autosurvey",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
+  "description": "No need to anwster 300 plus question, just skip the process, automate and enjoy",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@playwright/test": "^1.30.0"
-  },
   "dependencies": {
     "playwright": "^1.30.0"
   }
